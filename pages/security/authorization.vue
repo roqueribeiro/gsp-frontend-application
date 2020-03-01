@@ -66,7 +66,6 @@ export default {
     errorMessageMethod(e) {
       this.errorMessage = e
     }
-  },
-  middleware: 'authenticated'
+  }
 }
 </script>

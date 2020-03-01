@@ -109,26 +109,22 @@ export default {
       isLoggedIn: 'isLoggedIn'
     })
   },
-  // mounted() {
-  //   this.$nextTick(() => {
-  //     this.$nuxt.$loading.start()
-  //     setTimeout(() => this.$nuxt.$loading.finish(), 10000)
-  //   })
-  // },
   methods: {
     ...mapActions({
       logoutUser: 'logoutUser'
     }),
     async logout() {
-      try {
-        await this.logoutUser()
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e)
-      } finally {
-        this.drawer = false
-        this.$router.push({ path: '/security/authorization' })
-      }
+      await this.logoutUser()
+        .then(() => {
+          this.$router.push({ path: '/security/authorization' })
+        })
+        .catch((e) => {
+          // eslint-disable-next-line no-console
+          console.log(e)
+        })
+        .finally(() => {
+          this.drawer = false
+        })
     }
   }
 }

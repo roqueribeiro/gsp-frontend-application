@@ -1,8 +1,4 @@
 <template>
-  <!-- <ValidationProvider v-slot="{ errors }" rules="required|alpha">
-    <input v-model="value" type="text" />
-    <span>{{ errors[0] }}</span>
-  </ValidationProvider> -->
   <ValidationObserver
     ref="observer"
     v-slot="{ invalid }"
@@ -11,14 +7,13 @@
   >
     <ValidationProvider
       v-slot="{ errors }"
-      name="Email"
+      :name="$t('security.authorization.username')"
       rules="required|email|min:8"
     >
       <v-text-field
         v-model="email"
         :error-messages="errors"
         :label="$t('security.authorization.username')"
-        name="login"
         prepend-inner-icon="mdi-account"
         outlined
         rounded
@@ -27,7 +22,7 @@
     </ValidationProvider>
     <ValidationProvider
       v-slot="{ errors }"
-      name="Password"
+      :name="$t('security.authorization.password')"
       rules="required|min:6"
     >
       <v-text-field
@@ -36,7 +31,6 @@
         :append-icon="hidePassword ? 'mdi-eye' : 'mdi-eye-off'"
         :type="hidePassword ? 'text' : 'password'"
         :label="$t('security.authorization.password')"
-        name="password"
         prepend-inner-icon="mdi-lock"
         outlined
         rounded
@@ -53,6 +47,23 @@
       @click="signInWithEmailAndPassword()"
       >{{ $t('security.authorization.submit') }}</v-btn
     >
+    <v-btn
+      class="mt-5"
+      depressed
+      rounded
+      block
+      text
+      large
+      @click="signInWithGoogle()"
+    >
+      <v-img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+        max-width="18"
+        max-height="22"
+        class="mr-5"
+      ></v-img>
+      {{ $t('security.authorization.google') }}
+    </v-btn>
   </ValidationObserver>
 </template>
 <script>
@@ -77,18 +88,34 @@ export default {
         return false
       }
       this.$emit('showLoading', true)
-      try {
-        await this.$fireAuth.signInWithEmailAndPassword(
-          this.email,
-          this.password
-        )
-      } catch (e) {
-        this.$emit('errorMessage', e)
-      } finally {
-        this.$emit('showLoading', false)
-        this.email = ''
-        this.password = ''
-      }
+      await this.$fireAuth
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+          this.$router.push({ path: '/adverts' })
+        })
+        .catch((e) => {
+          this.email = ''
+          this.password = ''
+          this.$emit('errorMessage', e)
+        })
+        .finally(() => {
+          this.$emit('showLoading', false)
+        })
+    },
+    async signInWithGoogle() {
+      const provider = new this.$fireAuthObj.GoogleAuthProvider()
+      this.$emit('showLoading', true)
+      await this.$fireAuth
+        .signInWithPopup(provider)
+        .then((result) => {
+          this.$router.push('/adverts')
+        })
+        .catch((e) => {
+          this.$emit('errorMessage', e)
+        })
+        .finally(() => {
+          this.$emit('showLoading', false)
+        })
     }
   }
 }

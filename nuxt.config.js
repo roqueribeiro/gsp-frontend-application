@@ -164,6 +164,9 @@ module.exports = {
       }
     }
   },
+  router: {
+    middleware: 'authenticated'
+  },
   /*
    ** Build configuration
    */
