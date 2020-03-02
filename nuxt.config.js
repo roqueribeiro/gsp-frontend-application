@@ -143,6 +143,16 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  pwa: {
+    manifest: {
+      name: 'MySolver',
+      shortName: 'MySolver',
+      display: 'standalone',
+      orientation: 'portrait',
+      backgroundColor: colors.grey.lighten3,
+      description: 'description'
+    }
+  }
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
