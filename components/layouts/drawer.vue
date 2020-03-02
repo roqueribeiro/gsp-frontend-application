@@ -18,14 +18,6 @@
             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
-          <v-list-item-content>
-            <v-list-item-title class="title">Perfil</v-list-item-title>
-            <v-list-item-subtitle>
-              {{ authUser }}
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
       </template>
       <v-divider></v-divider>
       <v-list>
@@ -60,19 +52,43 @@
     </v-navigation-drawer>
     <v-app-bar dark fixed app color="primary">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title />
+      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+        <span class="hidden-sm-and-down" v-text="title"></span>
+      </v-toolbar-title>
+      <v-text-field
+        flat
+        solo-inverted
+        hide-details
+        prepend-inner-icon="mdi-magnify"
+        label="Pesquisar..."
+        class="hidden-sm-and-down"
+      />
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
+        <v-icon>mdi-bell</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-navigation-drawer v-model="rightDrawer" right temporary fixed>
-      <v-list>
-        <v-list-item>
-          <v-list-item-action>
-            <v-icon light>mdi-repeat</v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Notificações</v-list-item-title>
+    <v-navigation-drawer v-model="rightDrawer" right fixed temporary>
+      <v-list shaped>
+        <v-list-item
+          v-for="(item, i) in notifications"
+          :key="i"
+          :to="item.to"
+          three-line
+          @click="notificationClick(1)"
+        >
+          <v-list-item-avatar>
+            <v-icon :color="item.type">{{ item.icon }}</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              {{ item.description }}
+            </v-list-item-subtitle>
+          </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -98,6 +114,26 @@ export default {
         to: '/adverts'
       }
     ],
+    notifications: [
+      {
+        icon: 'mdi-check-circle',
+        type: 'success',
+        title: 'Notificação de Exemplo',
+        description: 'Texto descritivo da notificação'
+      },
+      {
+        icon: 'mdi-check-circle',
+        type: 'success',
+        title: 'Notificação de Exemplo',
+        description: 'Texto descritivo da notificação'
+      },
+      {
+        icon: 'mdi-alert-circle',
+        type: 'warning',
+        title: 'Notificação de Exemplo',
+        description: 'Texto descritivo da notificação'
+      }
+    ],
     rightDrawer: false,
     title: 'MySolver'
   }),
@@ -113,6 +149,10 @@ export default {
     ...mapActions({
       logoutUser: 'logoutUser'
     }),
+    notificationClick(e) {
+      // eslint-disable-next-line no-console
+      console.log(e)
+    },
     async logout() {
       await this.logoutUser()
         .then(() => {
