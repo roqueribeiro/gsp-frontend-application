@@ -1,4 +1,4 @@
-export default function({ store, redirect, route }) {
+export default ({ store, redirect }) => {
   if (!store.getters.isLoggedIn) {
     return redirect('/security/authorization')
   }

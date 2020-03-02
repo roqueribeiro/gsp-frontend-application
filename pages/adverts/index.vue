@@ -262,6 +262,18 @@ export default {
         // eslint-disable-next-line no-console
         console.log(e)
       }
+    },
+    head() {
+      return {
+        title: 'Adverts',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: ''
+          }
+        ]
+      }
     }
   })
 }

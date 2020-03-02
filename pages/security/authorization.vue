@@ -66,6 +66,18 @@ export default {
     errorMessageMethod(e) {
       this.errorMessage = e
     }
+  },
+  head() {
+    return {
+      title: 'Authorization',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
+    }
   }
 }
 </script>

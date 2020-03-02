@@ -6,8 +6,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - MySolver',
+    title: 'MySolver',
     meta: [
       {
         charset: 'utf-8'
@@ -19,7 +19,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: ''
       }
     ],
     link: [
