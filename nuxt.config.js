@@ -30,6 +30,21 @@ module.exports = {
       }
     ]
   },
+  pwa: {
+    manifest: {
+      name: 'MySolver',
+      short_name: 'MySolver',
+      description: 'description',
+      display: 'standalone',
+      orientation: 'portrait',
+      start_url: '/adverts',
+      theme_color: colors.blue.darken2,
+      background_color: colors.grey.lighten3
+    }
+  },
+  router: {
+    middleware: 'authenticated'
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -143,16 +158,6 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  pwa: {
-    manifest: {
-      name: 'MySolver',
-      shortName: 'MySolver',
-      display: 'standalone',
-      orientation: 'portrait',
-      backgroundColor: colors.grey.lighten3,
-      description: 'description'
-    }
-  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -180,9 +185,6 @@ module.exports = {
         }
       }
     }
-  },
-  router: {
-    middleware: 'authenticated'
   },
   /*
    ** Build configuration
