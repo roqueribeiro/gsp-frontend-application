@@ -152,7 +152,7 @@ module.exports = {
       backgroundColor: colors.grey.lighten3,
       description: 'description'
     }
-  }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
