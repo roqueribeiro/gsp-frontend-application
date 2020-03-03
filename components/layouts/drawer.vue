@@ -56,14 +56,7 @@
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
         <span class="hidden-sm-and-down" v-text="title"></span>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Pesquisar..."
-        class="hidden-sm-and-down"
-      />
+      <SearchField />
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-bell</v-icon>
@@ -97,8 +90,12 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+import SearchField from '~/components/adverts/autocomplete.vue'
 
 export default {
+  components: {
+    SearchField
+  },
   data: () => ({
     localState: null,
     drawer: false,
@@ -145,6 +142,16 @@ export default {
       isLoggedIn: 'isLoggedIn'
     })
   },
+  // created() {
+  //   this.$router.options.routes.forEach((route) => {
+  //     // eslint-disable-next-line no-console
+  //     console.log(route)
+  //     this.menu.push({
+  //       name: route.name,
+  //       path: route.path
+  //     })
+  //   })
+  // },
   methods: {
     ...mapActions({
       logoutUser: 'logoutUser'

@@ -17,41 +17,45 @@
       <small class="text--secondary">Anúncios Patrocinados</small>
       <v-row align="center" justify="center" max-width="500">
         <v-col v-for="(item, i) in adverts" :key="i" cols="12" sm="3" md="3">
-          <v-card outlined class="mx-auto">
-            <v-list-item>
-              <v-list-item-avatar>
-                <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title class="headline">{{
-                  item.title
-                }}</v-list-item-title>
-                <v-list-item-subtitle>{{ item.author }}</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-            <v-carousel
-              :show-arrows="false"
-              hide-delimiter-background
-              height="192"
-            >
-              <v-carousel-item
-                v-for="(image, j) in item.carousel"
-                :key="j"
-                :src="image.src"
-              ></v-carousel-item>
-            </v-carousel>
-            <v-card-text>{{ item.description }}</v-card-text>
-            <v-card-actions>
-              <v-btn text color="primary">Saber mais</v-btn>
-              <v-spacer></v-spacer>
-              <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
+          <v-lazy :options="{ threshold: 0.5 }" transition="fade-transition">
+            <v-card outlined class="mx-auto">
+              <v-list-item>
+                <v-list-item-avatar>
+                  <v-img
+                    src="https://cdn.vuetifyjs.com/images/john.png"
+                  ></v-img>
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title class="headline">{{
+                    item.title
+                  }}</v-list-item-title>
+                  <v-list-item-subtitle>{{ item.author }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-carousel
+                :show-arrows="false"
+                hide-delimiter-background
+                height="192"
+              >
+                <v-carousel-item
+                  v-for="(image, j) in item.carousel"
+                  :key="j"
+                  :src="image.src"
+                ></v-carousel-item>
+              </v-carousel>
+              <v-card-text>{{ item.description }}</v-card-text>
+              <v-card-actions>
+                <v-btn text color="primary">Saber mais</v-btn>
+                <v-spacer></v-spacer>
+                <v-btn icon>
+                  <v-icon>mdi-heart</v-icon>
+                </v-btn>
+                <v-btn icon>
+                  <v-icon>mdi-share-variant</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-lazy>
         </v-col>
       </v-row>
     </v-container>
@@ -65,41 +69,45 @@
       </small>
       <v-row align="center" justify="center" max-width="500">
         <v-col v-for="(item, i) in adverts" :key="i" cols="12" sm="3" md="3">
-          <v-card outlined class="mx-auto">
-            <v-list-item>
-              <v-list-item-avatar>
-                <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title class="headline">{{
-                  item.title
-                }}</v-list-item-title>
-                <v-list-item-subtitle>{{ item.author }}</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-            <v-carousel
-              :show-arrows="false"
-              hide-delimiter-background
-              height="192"
-            >
-              <v-carousel-item
-                v-for="(image, j) in item.carousel"
-                :key="j"
-                :src="image.src"
-              ></v-carousel-item>
-            </v-carousel>
-            <v-card-text>{{ item.description }}</v-card-text>
-            <v-card-actions>
-              <v-btn text color="primary">Saber mais</v-btn>
-              <v-spacer></v-spacer>
-              <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
+          <v-lazy :options="{ threshold: 0.5 }" transition="fade-transition">
+            <v-card outlined class="mx-auto">
+              <v-list-item>
+                <v-list-item-avatar>
+                  <v-img
+                    src="https://cdn.vuetifyjs.com/images/john.png"
+                  ></v-img>
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title class="headline">{{
+                    item.title
+                  }}</v-list-item-title>
+                  <v-list-item-subtitle>{{ item.author }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-carousel
+                :show-arrows="false"
+                hide-delimiter-background
+                height="192"
+              >
+                <v-carousel-item
+                  v-for="(image, j) in item.carousel"
+                  :key="j"
+                  :src="image.src"
+                ></v-carousel-item>
+              </v-carousel>
+              <v-card-text>{{ item.description }}</v-card-text>
+              <v-card-actions>
+                <v-btn text color="primary">Saber mais</v-btn>
+                <v-spacer></v-spacer>
+                <v-btn icon>
+                  <v-icon>mdi-heart</v-icon>
+                </v-btn>
+                <v-btn icon>
+                  <v-icon>mdi-share-variant</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-lazy>
         </v-col>
       </v-row>
     </v-container>

@@ -49,6 +49,7 @@ import Background from '~/components/layouts/background.vue'
 import FormAuthentication from '~/components/security/formAuthentication.vue'
 
 export default {
+  name: 'Authorization',
   components: {
     Logo,
     Background,
