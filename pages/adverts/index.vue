@@ -5,12 +5,17 @@
       height="350"
       hide-delimiter-background
       show-arrows-on-hover
+      progress
     >
-      <v-carousel-item
-        v-for="(item, i) in carousel"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
+      <v-carousel-item v-for="(item, i) in carousel" :key="i" :src="item.src">
+        <v-sheet height="100%" color="transparent" tile>
+          <v-row class="fill-height" align="center" justify="center">
+            <div class="display-2 font-weight-thin carousel-title">
+              {{ item.title }}
+            </div>
+          </v-row>
+        </v-sheet>
+      </v-carousel-item>
     </v-carousel>
     <v-container class="pt-10">
       <h1 class="display-1 font-weight-light text--primary">Destaques</h1>
@@ -145,10 +150,22 @@
 export default {
   data: () => ({
     carousel: [
-      { src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg' },
-      { src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg' },
-      { src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg' },
-      { src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg' }
+      {
+        src: '/banners/adverts/top/adverts-banners-1.jpg',
+        title: 'Mecânicos'
+      },
+      {
+        src: '/banners/adverts/top/adverts-banners-2.jpg',
+        title: 'Encanadores'
+      },
+      {
+        src: '/banners/adverts/top/adverts-banners-3.jpg',
+        title: 'Jardineiros'
+      },
+      {
+        src: '/banners/adverts/top/adverts-banners-4.jpg',
+        title: 'Cabeleireir(a)s'
+      }
     ],
     adverts: [
       {
@@ -287,6 +304,15 @@ export default {
 }
 </script>
 <style scoped>
+.carousel-title {
+  width: 100%;
+  text-align: center;
+  color: #222;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  background-color: rgb(239, 239, 239, 0.8);
+  backdrop-filter: blur(2px);
+}
 .mosaic > .mosaic-item {
   background-color: white;
   box-shadow: inset 0px 0px 0px 5px #eeeeee;
