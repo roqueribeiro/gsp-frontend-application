@@ -11,10 +11,13 @@
       <template v-slot:prepend>
         <v-list-item two-line>
           <v-list-item-avatar>
-            <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+            <v-img
+              src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+              aspect-ratio="1"
+            />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>Jane Smith</v-list-item-title>
+            <v-list-item-title>Brian Smith</v-list-item-title>
             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -52,11 +55,29 @@
     </v-navigation-drawer>
     <v-app-bar dark fixed app color="primary">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title />
-      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span class="hidden-sm-and-down" v-text="title"></span>
+      <v-toolbar-title class="mt-1 ml-n3 mr-4 hidden-sm-and-down">
+        <v-img
+          src="/logo/name-transparent-white.png"
+          max-width="112"
+          max-height="40"
+          class="ma-0 pa-0"
+        ></v-img>
       </v-toolbar-title>
-      <SearchField />
+      <v-toolbar-title class="ml-0 mr-0 d-sm-flex d-md-none">
+        <v-img
+          src="/logo/logo-transparent-white.png"
+          max-width="36"
+          max-height="36"
+          class="ma-0 pa-0"
+        ></v-img>
+      </v-toolbar-title>
+      <v-container fluid>
+        <v-row no-gutters justify="end">
+          <v-col sm="12" md="10" lg="6" xl="2">
+            <SearchField />
+          </v-col>
+        </v-row>
+      </v-container>
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-bell</v-icon>

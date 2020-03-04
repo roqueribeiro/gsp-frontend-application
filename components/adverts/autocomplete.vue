@@ -5,14 +5,15 @@
     :items="items"
     :search-input.sync="search"
     cache-items
-    class="hidden-sm-and-down"
     flat
     hide-no-data
     hide-details
     prepend-inner-icon="mdi-magnify"
     label="Pesquisar..."
     solo-inverted
-  ></v-autocomplete>
+    clearable
+  >
+  </v-autocomplete>
 </template>
 <script>
 export default {
