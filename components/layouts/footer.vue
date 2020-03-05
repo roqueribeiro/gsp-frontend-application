@@ -2,16 +2,16 @@
   <v-footer color="gray lighten-1">
     <v-row justify="center">
       <v-btn
-        v-for="link in links"
-        :key="link"
-        :to="link.to"
+        v-for="(item, i) in links"
+        :key="i"
+        :to="item.to"
         nuxt
         text
         x-small
         rounded
         class="ma-2 hidden-sm-and-down"
       >
-        {{ link.title }}
+        {{ item.title }}
       </v-btn>
       <v-col
         class="gray lighten-2 text-center font-weight-regular caption"
