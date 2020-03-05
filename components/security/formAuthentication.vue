@@ -91,7 +91,7 @@ export default {
       await this.$fireAuth
         .signInWithEmailAndPassword(this.email, this.password)
         .then(() => {
-          this.$router.push({ path: '/adverts' })
+          this.$router.push({ path: this.localePath('/adverts') })
         })
         .catch((e) => {
           this.email = ''
@@ -108,7 +108,7 @@ export default {
       await this.$fireAuth
         .signInWithPopup(provider)
         .then((result) => {
-          this.$router.push('/adverts')
+          this.$router.push({ path: this.localePath('/adverts') })
         })
         .catch((e) => {
           this.$emit('errorMessage', e)

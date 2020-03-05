@@ -13,7 +13,7 @@
           </v-alert>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn nuxt to="/adverts" depressed color="primary">
+            <v-btn nuxt :to="localePath('/adverts')" depressed color="primary">
               <v-icon left>mdi-arrow-left</v-icon> Voltar
             </v-btn>
           </v-card-actions>

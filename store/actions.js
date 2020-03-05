@@ -1,3 +1,5 @@
+import middlewareAuthenticated from '~/middleware/authenticated'
+
 export default {
   async nuxtServerInit({ commit }, ctx) {
     const ssrVerifiedAuthUser = ctx.res.verifiedFireAuthUser
@@ -8,6 +10,7 @@ export default {
         claims: ssrVerifiedAuthUserClaims
       })
     }
+    await middlewareAuthenticated(ctx)
   },
   handleSuccessfulAuthentication({ commit }, { authUser }) {
     if (process.browser && 'serviceWorker' in navigator) {
@@ -15,14 +18,9 @@ export default {
     }
     commit('SET_AUTH_USER', { authUser })
   },
-  async logoutUser({ commit, dispatch }) {
-    try {
-      await this.$fireAuth.signOut()
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e)
-    } finally {
+  async logoutUser({ commit }) {
+    await this.$fireAuth.signOut().then(function() {
       commit('RESET_STORE')
-    }
+    })
   }
 }

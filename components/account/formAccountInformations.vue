@@ -43,10 +43,7 @@
                 ></v-text-field>
               </ValidationProvider>
             </template>
-            <v-date-picker
-              v-model="date"
-              @change="menu1 = false"
-            ></v-date-picker>
+            <v-date-picker v-model="date"></v-date-picker>
           </v-menu>
         </v-col>
         <v-col cols="12" md="10">
@@ -175,6 +172,7 @@ export default {
     states: StatesFromBrazil,
     fields: {
       name: '',
+      date: '',
       state: {
         name: '',
         short_name: ''

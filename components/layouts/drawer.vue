@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="isLoggedIn" class="ma-0 pa-0" fluid>
+  <v-container v-if="navigation" class="ma-0 pa-0" fluid>
     <v-navigation-drawer
       v-model="drawer"
       dark
@@ -27,7 +27,7 @@
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
-          :to="item.to"
+          :to="localePath(item.to)"
           router
           exact
         >
@@ -118,7 +118,6 @@ export default {
     SearchField
   },
   data: () => ({
-    localState: null,
     drawer: false,
     items: [
       {
@@ -161,38 +160,24 @@ export default {
     }),
     ...mapGetters({
       isLoggedIn: 'isLoggedIn'
-    })
+    }),
+    navigation: (ctx) => {
+      const routeName = ctx.$route.name
+      const isLoggedIn = ctx.$store.getters.isLoggedIn
+      if (!routeName) return false
+      return !routeName.includes('security-authorization') && isLoggedIn && true
+    }
   },
-  // created() {
-  //   this.$router.options.routes.forEach((route) => {
-  //     // eslint-disable-next-line no-console
-  //     console.log(route)
-  //     this.menu.push({
-  //       name: route.name,
-  //       path: route.path
-  //     })
-  //   })
-  // },
   methods: {
     ...mapActions({
       logoutUser: 'logoutUser'
     }),
-    notificationClick(e) {
-      // eslint-disable-next-line no-console
-      console.log(e)
-    },
+    notificationClick(e) {},
     async logout() {
-      await this.logoutUser()
-        .then(() => {
-          this.$router.push({ path: '/security/authorization' })
-        })
-        .catch((e) => {
-          // eslint-disable-next-line no-console
-          console.log(e)
-        })
-        .finally(() => {
-          this.drawer = false
-        })
+      await this.logoutUser().then(() => {
+        this.$router.push({ path: this.localePath('/security/authorization') })
+        this.drawer = false
+      })
     }
   }
 }

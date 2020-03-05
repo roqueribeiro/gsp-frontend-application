@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
-    <v-row dense>
-      <v-col cols="12" xs="12" sm="12" md="12" lg="12" class="mt-10">
+  <v-container class="fill-height" fluid>
+    <v-row dense no-gutters>
+      <v-col cols="12" xs="12" sm="12" md="12" lg="12">
         <Logo class="mx-auto" />
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="12" lg="12">
