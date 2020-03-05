@@ -1,9 +1,9 @@
 export default {
-  nnuxtServerInit({ commit }, ctx) {
+  async nuxtServerInit({ commit }, ctx) {
     const ssrVerifiedAuthUser = ctx.res.verifiedFireAuthUser
     const ssrVerifiedAuthUserClaims = ctx.res.verifiedFireAuthUserClaims
     if (ssrVerifiedAuthUser && ssrVerifiedAuthUserClaims) {
-      commit('SET_AUTH_USER', {
+      await commit('SET_AUTH_USER', {
         authUser: ssrVerifiedAuthUser,
         claims: ssrVerifiedAuthUserClaims
       })

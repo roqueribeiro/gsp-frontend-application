@@ -1,5 +1,5 @@
 <template>
-  <v-layout v-show="isLoggedIn">
+  <v-layout v-if="isLoggedIn">
     <v-navigation-drawer
       v-model="drawer"
       dark
