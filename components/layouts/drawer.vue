@@ -1,5 +1,5 @@
 <template>
-  <v-container class="ma-0 pa-0" fluid>
+  <v-container v-if="isLoggedIn" class="ma-0 pa-0" fluid>
     <v-navigation-drawer
       v-model="drawer"
       dark
