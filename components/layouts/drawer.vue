@@ -1,5 +1,5 @@
 <template>
-  <v-layout v-if="isLoggedIn">
+  <v-container class="ma-0 pa-0" fluid>
     <v-navigation-drawer
       v-model="drawer"
       dark
@@ -106,7 +106,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </v-layout>
+  </v-container>
 </template>
 
 <script>
