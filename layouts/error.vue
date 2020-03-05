@@ -1,15 +1,26 @@
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
+  <v-container class="py-10" fluid>
+    <v-row>
+      <v-col sm="12">
+        <v-card class="mx-auto" color="transparent" flat max-width="400">
+          <v-alert type="error" outlined>
+            <span v-if="error.statusCode === 404">
+              {{ pageNotFound }}
+            </span>
+            <span v-else>
+              {{ otherError }}
+            </span>
+          </v-alert>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn nuxt to="/adverts" depressed color="primary">
+              <v-icon left>mdi-arrow-left</v-icon> Voltar
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

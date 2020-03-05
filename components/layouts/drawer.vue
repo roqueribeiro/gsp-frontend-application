@@ -17,7 +17,7 @@
             />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>Brian Smith</v-list-item-title>
+            <v-list-item-title>Marcus Smith</v-list-item-title>
             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -124,7 +124,7 @@ export default {
       {
         icon: 'mdi-chart-bubble',
         title: 'Meu Perfil',
-        to: '/account'
+        to: '/account/1'
       },
       {
         icon: 'mdi-apps',

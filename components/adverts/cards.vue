@@ -1,9 +1,16 @@
 <template>
   <v-row align="center" justify="center">
-    <v-col v-for="(item, i) in adverts" :key="i" cols="12" sm="3" md="3">
+    <v-col
+      v-for="(item, i) in adverts"
+      :key="i"
+      cols="12"
+      xs="12"
+      sm="6"
+      md="3"
+    >
       <v-lazy transition="fade-transition">
-        <v-card shaped class="mx-auto align-self-start">
-          <v-list-item>
+        <v-card>
+          <v-list-item nuxt :to="item.to">
             <v-list-item-avatar>
               <v-img :src="item.avatar"></v-img>
             </v-list-item-avatar>
@@ -46,7 +53,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn small text>
+            <v-btn disabled small text>
               <v-icon class="mr-2" color="primary">mdi-map-marker</v-icon>
               {{ item.distance }} Km
             </v-btn>

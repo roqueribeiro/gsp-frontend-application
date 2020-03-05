@@ -1,7 +1,13 @@
 <template>
-  <v-content class="ma-0 pa-0">
+  <v-container class="ma-0 pa-0" fluid>
     <avertCarousel :banners="banners" />
-    <v-container class="pt-10 max-width">
+    <v-card
+      color="transparent"
+      elevation="0"
+      class="mx-auto my-5 px-5"
+      tile
+      max-width="1200"
+    >
       <h1 class="display-1 font-weight-light text--primary">
         Destaques
       </h1>
@@ -9,9 +15,15 @@
         Anúncios Patrocinados
       </small>
       <avertCards :adverts="advertsPaid" />
-    </v-container>
+    </v-card>
     <v-divider></v-divider>
-    <v-container class="pt-10 max-width">
+    <v-card
+      color="transparent"
+      elevation="0"
+      class="mx-auto my-5 px-5"
+      tile
+      max-width="1200"
+    >
       <h1 class="display-1 font-weight-light text--primary">
         Mais Acessados
       </h1>
@@ -19,15 +31,21 @@
         Anúncios com mais acessos nesta semana
       </small>
       <avertCards :adverts="advertsMostViewed" />
-    </v-container>
+    </v-card>
     <v-divider></v-divider>
-    <v-container class="pt-10 pb-10 max-width">
+    <v-card
+      color="transparent"
+      elevation="0"
+      class="mx-auto my-5 px-5"
+      tile
+      max-width="1200"
+    >
       <h1 class="display-1 font-weight-light text--primary">
         Principais Categorias
       </h1>
       <avertMosaic :categories="categories" />
-    </v-container>
-  </v-content>
+    </v-card>
+  </v-container>
 </template>
 <script>
 import avertCarousel from '~/components/adverts/carousel.vue'
@@ -44,26 +62,27 @@ export default {
     banners: [
       {
         src: '/banners/adverts/top/adverts-banners-1.jpg',
-        title: 'Mecânicos'
+        title: 'Mecânica'
       },
       {
         src: '/banners/adverts/top/adverts-banners-2.jpg',
-        title: 'Encanadores'
+        title: 'Encanamento'
       },
       {
         src: '/banners/adverts/top/adverts-banners-3.jpg',
-        title: 'Jardineiros'
+        title: 'Jardinagem'
       },
       {
         src: '/banners/adverts/top/adverts-banners-4.jpg',
-        title: 'Cabeleireir(a)s'
+        title: 'Beleza e Estética'
       }
     ],
     advertsPaid: [
       {
+        id: '1',
         author: 'Aline Souza',
         avatar: '/adverts/sample/cabeleireira/avatar.jpg',
-        category: 'Cabeleireira',
+        category: 'Beleza e Estética',
         distance: 9,
         rating: 4.5,
         carousel: [
@@ -74,12 +93,14 @@ export default {
         ],
         details: false,
         description:
-          'Somos o único salão tradicional da região que além de oferecer serviços completos de corte de cabelo, manicure e pedicure, possuímos uma sala exclusiva para massagens com especialista com experiencia de 20 anos no setor.'
+          'Somos o único salão tradicional da região que além de oferecer serviços completos de corte de cabelo, manicure e pedicure, possuímos uma sala exclusiva para massagens com especialista com experiencia de 20 anos no setor.',
+        to: '/account/1'
       },
       {
+        id: '2',
         author: 'Pablo Silva',
         avatar: '/adverts/sample/mecanico/avatar.jpg',
-        category: 'Mecanico',
+        category: 'Mecânica',
         distance: 12,
         rating: 4,
         carousel: [
@@ -89,12 +110,14 @@ export default {
         ],
         details: false,
         description:
-          'Trabalhamos com todas as marcas e tipos de veículos automotores.'
+          'Trabalhamos com todas as marcas e tipos de veículos automotores.',
+        to: '/account/2'
       },
       {
+        id: '3',
         author: 'Alan Cardoso',
         avatar: '/adverts/sample/jardineiro/avatar.jpg',
-        category: 'Jardineiro',
+        category: 'Jardinagem',
         distance: 8,
         rating: 3.8,
         carousel: [
@@ -104,12 +127,14 @@ export default {
         ],
         details: false,
         description:
-          'Tenho experiência com jardins empresariais e residenciais.'
+          'Tenho experiência com jardins empresariais e residenciais.',
+        to: '/account/3'
       },
       {
+        id: '4',
         author: 'Pedro dos Santos',
         avatar: '/adverts/sample/encanador/avatar.jpg',
-        category: 'Encanador',
+        category: 'Encanamento',
         distance: 17,
         rating: 3.4,
         carousel: [
@@ -119,14 +144,16 @@ export default {
           { src: '/adverts/sample/encanador/4.jpg' }
         ],
         details: false,
-        description: 'Trabalho a mais de 20 anos com serviços hidráulicos.'
+        description: 'Trabalho a mais de 20 anos com serviços hidráulicos.',
+        to: '/account/4'
       }
     ],
     advertsMostViewed: [
       {
+        id: '5',
         author: 'Marcos Silva',
         avatar: '/adverts/sample/fotografo/avatar.jpg',
-        category: 'Fotografo',
+        category: 'Fotografia',
         distance: 9,
         rating: 4.5,
         carousel: [
@@ -135,12 +162,14 @@ export default {
         ],
         details: false,
         description:
-          'Fotografo de casamentos e eventos particulares ou empresariais.'
+          'Fotografo de casamentos e eventos particulares ou empresariais.',
+        to: '/account/5'
       },
       {
+        id: '4',
         author: 'Pablo Silva',
         avatar: '/adverts/sample/musico/avatar.jpg',
-        category: 'Músicos',
+        category: 'Música',
         distance: 12,
         rating: 4,
         carousel: [
@@ -150,12 +179,14 @@ export default {
         ],
         details: false,
         description:
-          'Músicos formados para casamentos e eventos particulares ou empresariais.'
+          'Músicos formados para casamentos e eventos particulares ou empresariais.',
+        to: '/account/6'
       },
       {
+        id: '6',
         author: 'Fretados p/ São Paulo',
         avatar: '/adverts/sample/fretado/avatar.jpg',
-        category: 'Fretados',
+        category: 'Fretamento',
         distance: 8,
         rating: 3.8,
         carousel: [
@@ -164,12 +195,14 @@ export default {
         ],
         details: false,
         description:
-          'O ônibus fretado mensal para empresa preço Casa Verde é construído para comportar uma imensa quantidade de pessoas de modo adequado, para se tornar possível que elas possam percorrer as rodovias até chegarem nos locais que desejam conhecer de modo mais divertido e seguro. Com a utilização de bancos que podem ser ajustáveis para que os passageiros tenham mais conforto e que possam usar as tomadas que são instaladas na parede dos veículos para carregar o celular ou ainda utilizar o WI-FI para navegar na internet e se entreter.'
+          'O ônibus fretado mensal para empresa preço Casa Verde é construído para comportar uma imensa quantidade de pessoas de modo adequado, para se tornar possível que elas possam percorrer as rodovias até chegarem nos locais que desejam conhecer de modo mais divertido e seguro. Com a utilização de bancos que podem ser ajustáveis para que os passageiros tenham mais conforto e que possam usar as tomadas que são instaladas na parede dos veículos para carregar o celular ou ainda utilizar o WI-FI para navegar na internet e se entreter.',
+        to: '/account/7'
       },
       {
+        id: '7',
         author: 'Pedro dos Santos',
         avatar: '/adverts/sample/encanador/avatar.jpg',
-        category: 'Encanador',
+        category: 'Encanamento',
         distance: 17,
         rating: 3.4,
         carousel: [
@@ -179,81 +212,100 @@ export default {
           { src: '/adverts/sample/encanador/4.jpg' }
         ],
         details: false,
-        description: 'Trabalho a mais de 20 anos com serviços hidráulicos.'
+        description: 'Trabalho a mais de 20 anos com serviços hidráulicos.',
+        to: '/account/8'
       }
     ],
     categories: [
       {
         icon: 'mdi-key-variant',
-        title: 'Chaveiro'
+        title: 'Chaveiro',
+        to: 'adverts/1'
       },
       {
         icon: 'mdi-flower',
-        title: 'Jardineiro'
+        title: 'Jardinagem',
+        to: 'adverts/2'
       },
       {
         icon: 'mdi-bus-stop',
-        title: 'Fretados'
+        title: 'Fretamento',
+        to: 'adverts/3'
       },
       {
         icon: 'mdi-camera',
-        title: 'Fotograf(a)'
+        title: 'Fotografia',
+        to: 'adverts/4'
       },
       {
         icon: 'mdi-car',
-        title: 'Motorista'
+        title: 'Motorista',
+        to: 'adverts/5'
       },
       {
         icon: 'mdi-dog-service',
-        title: 'Adestrador'
+        title: 'Adestramento',
+        to: 'adverts/6'
       },
       {
         icon: 'mdi-flask-round-bottom-outline',
-        title: 'Eletrecista'
+        title: 'Eletrecista',
+        to: 'adverts/7'
       },
       {
         icon: 'mdi-foot-print',
-        title: 'Podólog(a)'
+        title: 'Podologia',
+        to: 'adverts/8'
       },
       {
         icon: 'mdi-oil-temperature',
-        title: 'Mecânico'
+        title: 'Mecânica',
+        to: 'adverts/9'
       },
       {
         icon: 'mdi-pipe-wrench',
-        title: 'Encanador'
+        title: 'Encanamento',
+        to: 'adverts/10'
       },
       {
         icon: 'mdi-propane-tank',
-        title: 'Entregador de Gás'
+        title: 'Entrega de Gás',
+        to: 'adverts/11'
       },
       {
         icon: 'mdi-truck-delivery',
-        title: 'Serviços de Carreto'
+        title: 'Carreto',
+        to: 'adverts/12'
       },
       {
         icon: 'mdi-video-vintage',
-        title: 'Produtora'
+        title: 'Produtora',
+        to: 'adverts/13'
       },
       {
         icon: 'mdi-wall',
-        title: 'Pedreiro'
+        title: 'Pedreiro',
+        to: 'adverts/14'
       },
       {
         icon: 'mdi-watch',
-        title: 'Relojoeiro'
+        title: 'Relojoaria',
+        to: 'adverts/15'
       },
       {
         icon: 'mdi-wardrobe-outline',
-        title: 'Montador de Móveis'
+        title: 'Montador de Móveis',
+        to: 'adverts/16'
       },
       {
         icon: 'mdi-weight-lifter',
-        title: 'Personal'
+        title: 'Personal',
+        to: 'adverts/17'
       },
       {
         icon: 'mdi-wrench',
-        title: 'Serviços Gerais'
+        title: 'Serviços Gerais',
+        to: 'adverts/18'
       }
     ],
     head() {
@@ -271,8 +323,3 @@ export default {
   })
 }
 </script>
-<style scoped>
-.max-width {
-  max-width: 1200px;
-}
-</style>

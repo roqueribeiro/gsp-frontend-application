@@ -1,24 +1,22 @@
 <template>
-  <v-row class="mosaic pt-5">
+  <v-row class="mt-5 mb-10" align="center" justify="center" no-gutters>
     <v-col
       v-for="(item, i) in categories"
       :key="i"
-      class="mosaic-item"
       cols="12"
-      sm="1"
+      xs="12"
+      sm="3"
       md="2"
       @click="categorySelector(i)"
     >
-      <v-row justify-center align-center>
-        <v-col class="text-center" cols="12" sm="12">
-          <v-icon x-large class="ma-5">{{ item.icon }}</v-icon>
-        </v-col>
-        <v-col cols="12" sm="12">
-          <p class="text-center body-2 font-regular">
-            {{ item.title }}
-          </p>
-        </v-col>
-      </v-row>
+      <v-card nuxt :to="item.to" class="ma-2" hover outlined>
+        <p class="text-center ma-10">
+          <v-icon x-large>{{ item.icon }}</v-icon>
+        </p>
+        <p class="text-center body-2 font-regular">
+          {{ item.title }}
+        </p>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -33,14 +31,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.mosaic > .mosaic-item {
-  background-color: white;
-  box-shadow: inset 0px 0px 0px 5px #eeeeee;
-  cursor: pointer;
-}
-.mosaic > .mosaic-item:hover {
-  color: #1976d2;
-  background-color: #f5f5f5;
-}
-</style>

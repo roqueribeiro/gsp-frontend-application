@@ -2,11 +2,9 @@
   <v-app>
     <v-content class="background">
       <Drawer />
-      <v-container class="pa-0" fluid>
-        <nuxt />
-      </v-container>
-      <Footer />
+      <nuxt />
     </v-content>
+    <Footer />
   </v-app>
 </template>
 

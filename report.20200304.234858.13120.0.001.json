@@ -1,0 +1,514 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200304.234858.13120.0.001.json",
+    "dumpEventTime": "2020-03-04T23:48:58Z",
+    "dumpEventTimeStamp": "1583376538052",
+    "processId": 13120,
+    "cwd": "C:\\Users\\roque\\Desktop\\gsp-frontend-application",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "server/index.js"
+    ],
+    "nodejsVersion": "v13.3.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "13.3.0",
+      "v8": "7.9.317.25-node.23",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.3.0/node-v13.3.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.3.0/node-v13.3.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v13.3.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 1516796,
+        "nice": 0,
+        "sys": 1160562,
+        "idle": 36093359,
+        "irq": 131281
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 2202484,
+        "nice": 0,
+        "sys": 354906,
+        "idle": 36213171,
+        "irq": 6921
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 2983453,
+        "nice": 0,
+        "sys": 1272421,
+        "idle": 34514687,
+        "irq": 17234
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 985375,
+        "nice": 0,
+        "sys": 404406,
+        "idle": 37380781,
+        "irq": 7468
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 1989921,
+        "nice": 0,
+        "sys": 1067906,
+        "idle": 35712734,
+        "irq": 21843
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 956515,
+        "nice": 0,
+        "sys": 370625,
+        "idle": 37443406,
+        "irq": 4968
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 1675953,
+        "nice": 0,
+        "sys": 899906,
+        "idle": 36194687,
+        "irq": 15859
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+        "speed": 4200,
+        "user": 1504437,
+        "nice": 0,
+        "sys": 583828,
+        "idle": 36682281,
+        "irq": 4890
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "1c:1b:0d:94:22:ac",
+        "address": "2804:14d:90bf:8071:5890:1479:f0f0:5e80",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "1c:1b:0d:94:22:ac",
+        "address": "2804:14d:90bf:8071:850a:2912:1327:c40b",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "1c:1b:0d:94:22:ac",
+        "address": "fe80::5890:1479:f0f0:5e80",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 14
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "1c:1b:0d:94:22:ac",
+        "address": "192.168.100.50",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:09:0c:95",
+        "address": "fe80::da7:eeed:8e5f:c89a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 18
+      },
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:09:0c:95",
+        "address": "192.168.8.65",
+        "netmask": "255.255.255.240",
+        "family": "IPv4"
+      }
+    ],
+    "host": "ROCKY-PC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff65f541509",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10857"
+    },
+    {
+      "pc": "0x00007ff65f54587c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28124"
+    },
+    {
+      "pc": "0x00007ff65f544838",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23960"
+    },
+    {
+      "pc": "0x00007ff65f63cc8b",
+      "symbol": "v8::base::CPU::has_sse+39435"
+    },
+    {
+      "pc": "0x00007ff65fe644ae",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff65fe4bc01",
+      "symbol": "v8::SharedArrayBuffer::Externalize+785"
+    },
+    {
+      "pc": "0x00007ff65fd12f5c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff65fd1e250",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff65fd1ad7f",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3151"
+    },
+    {
+      "pc": "0x00007ff65fd104d3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff65fd0ec64",
+      "symbol": "v8::internal::Heap::AllocateExternalBackingStore+1300"
+    },
+    {
+      "pc": "0x00007ff65fd30c54",
+      "symbol": "v8::internal::Factory::NewFillerObject+196"
+    },
+    {
+      "pc": "0x00007ff65fa8b0df",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1311"
+    },
+    {
+      "pc": "0x00007ff6602aae3d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+517453"
+    },
+    {
+      "pc": "0x000001c6b4b1cb29",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2172186624,
+    "totalCommittedMemory": 2172186624,
+    "usedMemory": 2152015288,
+    "availableMemory": 37055576,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 33040,
+        "used": 33040,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 8912896,
+        "committedMemory": 8912896,
+        "capacity": 4451552,
+        "used": 1115880,
+        "available": 3335672
+      },
+      "old_space": {
+        "memorySize": 1930825728,
+        "committedMemory": 1930825728,
+        "capacity": 1926969992,
+        "used": 1923330312,
+        "available": 3639680
+      },
+      "code_space": {
+        "memorySize": 4362240,
+        "committedMemory": 4362240,
+        "capacity": 3673536,
+        "used": 3673536,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 11538432,
+        "committedMemory": 11538432,
+        "capacity": 8158720,
+        "used": 8158720,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 215375872,
+        "committedMemory": 215375872,
+        "capacity": 214888184,
+        "used": 214888184,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 909312,
+        "committedMemory": 909312,
+        "capacity": 815616,
+        "used": 815616,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 4451552,
+        "used": 0,
+        "available": 4451552
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 197.843,
+    "kernelCpuSeconds": 18.25,
+    "cpuConsumptionPercent": 4.17087,
+    "maxRss": 2192424960,
+    "pageFaults": {
+      "IORequired": 2853406,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 15394,
+      "writes": 350
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\roque\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132205912946922704",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "ROCKY-PC",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOME": "C:\\Users\\roque",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\roque",
+    "INIT_CWD": "C:\\Users\\roque\\Desktop\\gsp-frontend-application",
+    "LANG": "pt_BR.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\roque\\AppData\\Local",
+    "LOGONSERVER": "\\\\ROCKY-PC",
+    "MSYSTEM": "MINGW64",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.21.1 npm/? node/v13.3.0 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Users\\roque\\AppData\\Roaming\\npm\\node_modules\\yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_author_name": "MySolver",
+    "npm_package_dependencies_core_js": "2.6.10",
+    "npm_package_dependencies_cross_env": "^5.2.0",
+    "npm_package_dependencies_express": "^4.16.4",
+    "npm_package_dependencies_firebase": "^7.9.3",
+    "npm_package_dependencies_nuxt": "^2.0.0",
+    "npm_package_dependencies_nuxt_i18n": "^6.6.0",
+    "npm_package_dependencies_vee_validate": "^3.2.5",
+    "npm_package_dependencies__nuxtjs_axios": "^5.3.6",
+    "npm_package_dependencies__nuxtjs_dotenv": "^1.4.0",
+    "npm_package_dependencies__nuxtjs_firebase": "^4.1.0",
+    "npm_package_dependencies__nuxtjs_pwa": "^3.0.0-0",
+    "npm_package_description": "MySolver Front End Application",
+    "npm_package_devDependencies_babel_eslint": "^10.0.1",
+    "npm_package_devDependencies_babel_jest": "^24.1.0",
+    "npm_package_devDependencies_eslint": "^6.1.0",
+    "npm_package_devDependencies_eslint_config_prettier": "^6.10.0",
+    "npm_package_devDependencies_eslint_plugin_nuxt": ">=0.4.2",
+    "npm_package_devDependencies_eslint_plugin_prettier": "^3.1.2",
+    "npm_package_devDependencies_husky": "^4.0.0",
+    "npm_package_devDependencies_jest": "^24.1.0",
+    "npm_package_devDependencies_lint_staged": "^10.0.0",
+    "npm_package_devDependencies_nodemon": "^1.18.9",
+    "npm_package_devDependencies_prettier": "^1.19.1",
+    "npm_package_devDependencies_stylelint": "^10.1.0",
+    "npm_package_devDependencies_vue_jest": "^4.0.0-0",
+    "npm_package_devDependencies__nuxtjs_eslint_config": "^2.0.0",
+    "npm_package_devDependencies__nuxtjs_eslint_module": "^1.0.0",
+    "npm_package_devDependencies__nuxtjs_stylelint_module": "^3.1.0",
+    "npm_package_devDependencies__nuxtjs_vuetify": "^1.0.0",
+    "npm_package_devDependencies__vue_test_utils": "^1.0.0-beta.27",
+    "npm_package_name": "gsp-frontend-application",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "nuxt build",
+    "npm_package_scripts_dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "npm_package_scripts_generate": "nuxt generate",
+    "npm_package_scripts_lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "npm_package_scripts_start": "cross-env NODE_ENV=production node server/index.js",
+    "npm_package_scripts_test": "jest",
+    "npm_package_version": "1.0.0",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OneDrive": "C:\\Users\\roque\\OneDrive",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Users\\roque\\AppData\\Local\\Temp\\yarn--1583371356129-0.615949648629901;C:\\Users\\roque\\Desktop\\gsp-frontend-application\\node_modules\\.bin;C:\\Users\\roque\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\roque\\AppData\\Local\\Yarn\\bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\roque\\bin;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Windows\\System32\\OpenSSH;C:\\Program Files\\dotnet;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn;C:\\Program Files\\nodejs;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Users\\roque\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\roque\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\roque\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\roque\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e09",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "C:/Users/roque/Desktop/gsp-frontend-application",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\Windows",
+    "TEMP": "C:\\Users\\roque\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.42.1",
+    "TMP": "C:\\Users\\roque\\AppData\\Local\\Temp",
+    "USERDOMAIN": "ROCKY-PC",
+    "USERDOMAIN_ROAMINGPROFILE": "ROCKY-PC",
+    "USERNAME": "roque",
+    "USERPROFILE": "C:\\Users\\roque",
+    "VUE_ENV": "server",
+    "WINDIR": "C:\\Windows",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "C:/Program Files/nodejs/node",
+    "_AXIOS_BASE_URL_": "http://localhost:3000/"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\System32\\UMPDC.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\wshbth.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll",
+    "\\\\?\\C:\\Users\\roque\\Desktop\\gsp-frontend-application\\node_modules\\grpc\\src\\node\\extension_binary\\node-v79-win32-x64-unknown\\grpc_n"
+  ]
+}

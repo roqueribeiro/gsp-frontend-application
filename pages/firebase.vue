@@ -15,6 +15,8 @@
 </template>
 
 <script>
+// hidden-lg-and-up hidden-sm-and-down
+
 import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   computed: {

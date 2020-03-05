@@ -3,6 +3,7 @@
     src="/logo/logo-name-transparent800.png"
     lazy-src="/logo/logo-name-transparent800.png"
     contain
+    min-height="60"
     :class="cssClass"
     :max-width="maxWidth"
     :max-height="maxHeight"
