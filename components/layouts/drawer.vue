@@ -5,7 +5,7 @@
       dark
       temporary
       fixed
-      src="https://images.pexels.com/photos/34090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      src="/menu-bg.jpg"
       app
     >
       <template v-slot:prepend>
