@@ -60,7 +60,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/bus', '~/plugins/vee-validate'],
+  plugins: ['~/plugins/bus', '~/plugins/socket', '~/plugins/vee-validate'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -71,6 +71,7 @@ module.exports = {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
     '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
     [
       '@nuxtjs/firebase',
       {
