@@ -307,19 +307,19 @@ export default {
         title: 'Serviços Gerais',
         to: 'adverts/18'
       }
-    ],
-    head() {
-      return {
-        title: 'Adverts',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: ''
-          }
-        ]
-      }
+    ]
+  }),
+  head() {
+    return {
+      title: 'Adverts',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
     }
-  })
+  }
 }
 </script>

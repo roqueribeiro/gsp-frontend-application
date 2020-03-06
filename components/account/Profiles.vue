@@ -19,7 +19,7 @@
         </template>
       </v-img>
     </v-col>
-    <v-card class="mx-auto profile-card mb-8" width="1200">
+    <v-card class="mx-auto profile-card mb-5" width="1200">
       <v-row no-gutters justify="center" align="center">
         <v-col class="text-center mb-5" cols="12" sm="12">
           <v-avatar
@@ -50,23 +50,27 @@
           <v-chip small class="ma-1">Serviços Gerais</v-chip>
         </v-col>
         <v-col class="text-center" lg="2">
-          <h1
-            class="headline text-center font-weight-light primary--text"
-            color="primary"
-          >
-            232
-          </h1>
-          <small class="text-center caption">
-            Seguidores
-          </small>
+          <v-card flat :to="localePath('/adverts')">
+            <h1
+              class="headline text-center font-weight-light primary--text"
+              color="primary"
+            >
+              232
+            </h1>
+            <small class="text-center caption">
+              Seguidores
+            </small>
+          </v-card>
         </v-col>
         <v-col class="text-center" lg="2">
-          <h1 class="headline text-center font-weight-light primary--text">
-            18
-          </h1>
-          <small class="text-center caption">
-            Serviços Realizados
-          </small>
+          <v-card flat :to="localePath('/adverts')">
+            <h1 class="headline text-center font-weight-light primary--text">
+              18
+            </h1>
+            <small class="text-center caption">
+              Serviços Realizados
+            </small>
+          </v-card>
         </v-col>
       </v-row>
       <v-divider class="mt-5"></v-divider>
@@ -79,10 +83,7 @@ export default {
   name: 'Profiles',
   components: {},
   data: () => ({
-    rating: 4.5,
-    date: new Date().toISOString().substr(0, 10),
-    menu1: false,
-    hidePassword: false
+    rating: 4.5
   })
 }
 </script>

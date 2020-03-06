@@ -1,7 +1,5 @@
 <template>
-  <v-layout column justify-center align-center>
-    <p>Home</p>
-  </v-layout>
+  <v-layout column justify-center align-center></v-layout>
 </template>
 
 <script>

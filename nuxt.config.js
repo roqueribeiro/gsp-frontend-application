@@ -60,7 +60,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vee-validate'],
+  plugins: ['~/plugins/bus', '~/plugins/vee-validate'],
   /*
    ** Nuxt.js dev-modules
    */

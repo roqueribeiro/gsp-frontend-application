@@ -80,7 +80,9 @@
       </v-container>
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-bell</v-icon>
+        <v-badge color="pink" content="3" overlap>
+          <v-icon>mdi-bell</v-icon>
+        </v-badge>
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer v-model="rightDrawer" right fixed temporary>
