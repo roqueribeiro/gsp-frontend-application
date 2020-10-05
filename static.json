@@ -1,4 +1,4 @@
 {
-  "root": "dist/",
+  "root": "static/",
   "canonical_host": "gsp-frontend-application.herokuapp.com"
 }
