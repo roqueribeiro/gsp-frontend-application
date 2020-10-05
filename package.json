@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "engines": {
-    "node": "12.x"
+    "node": "12.18.3"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
