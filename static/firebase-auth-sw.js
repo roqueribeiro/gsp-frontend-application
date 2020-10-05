@@ -1,4 +1,4 @@
-const options = {"firebaseVersion":"7.9.1","config":{"apiKey":"AIzaSyAZvXf-AAiNpfs9frl-fRiWjhkytizPURE","authDomain":"gsp-frontend-application.firebaseapp.com","databaseURL":"https:\u002F\u002Fgsp-frontend-application.firebaseio.com","projectId":"gsp-frontend-application","storageBucket":"gsp-frontend-application.appspot.com","messagingSenderId":"191300628714","appId":"1:191300628714:web:1314c7ab0e6e4855da6793","measurementId":"G-7RSW8KX0VS"},"onFirebaseHosting":false}
+const options = {"firebaseVersion":"7.9.3","config":{"apiKey":"AIzaSyAZvXf-AAiNpfs9frl-fRiWjhkytizPURE","authDomain":"gsp-frontend-application.firebaseapp.com","databaseURL":"https:\u002F\u002Fgsp-frontend-application.firebaseio.com","projectId":"gsp-frontend-application","storageBucket":"gsp-frontend-application.appspot.com","messagingSenderId":"191300628714","appId":"1:191300628714:web:1314c7ab0e6e4855da6793","measurementId":"G-7RSW8KX0VS"},"onFirebaseHosting":false}
 const version = options.firebaseVersion
 const onFirebaseHosting = options.onFirebaseHosting
 

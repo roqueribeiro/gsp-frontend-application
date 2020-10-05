@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-content class="background">
+    <v-main class="background">
       <Drawer />
       <nuxt />
-    </v-content>
+    </v-main>
     <Footer />
     <BottomNavigation />
   </v-app>
