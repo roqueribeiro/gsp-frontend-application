@@ -19,7 +19,7 @@ export default {
     commit('SET_AUTH_USER', { authUser })
   },
   async logoutUser({ commit }) {
-    await this.$fireAuth.signOut().then(function() {
+    await this.$fire.auth.signOut().then(function() {
       commit('RESET_STORE')
     })
   }

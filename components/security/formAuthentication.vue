@@ -73,13 +73,13 @@ export default {
   name: 'FormAuthentication',
   components: {
     ValidationObserver,
-    ValidationProvider
+    ValidationProvider,
   },
   data: () => ({
     value: '',
     hidePassword: false,
     email: '',
-    password: ''
+    password: '',
   }),
   methods: {
     async signInWithEmailAndPassword() {
@@ -88,9 +88,10 @@ export default {
         return false
       }
       this.$emit('showLoading', true)
-      await this.$fireAuth
+      await this.$fire.auth
         .signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
+        .then((data) => {
+          console.log(data)
           this.$router.push({ path: this.localePath('/adverts') })
         })
         .catch((e) => {
@@ -103,9 +104,9 @@ export default {
         })
     },
     async signInWithGoogle() {
-      const provider = new this.$fireAuthObj.GoogleAuthProvider()
+      const provider = new this.$fire.auth.GoogleAuthProvider()
       this.$emit('showLoading', true)
-      await this.$fireAuth
+      await this.$fire.auth
         .signInWithPopup(provider)
         .then((result) => {
           this.$router.push({ path: this.localePath('/adverts') })
@@ -116,7 +117,7 @@ export default {
         .finally(() => {
           this.$emit('showLoading', false)
         })
-    }
-  }
+    },
+  },
 }
 </script>

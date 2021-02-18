@@ -2,6 +2,9 @@ export default (ctx) => {
   const defaultLocale = ctx.app.i18n.defaultLocale
   const currentLocale = ctx.app.i18n.locale
   const localePath = currentLocale !== defaultLocale ? `/${currentLocale}` : ''
+
+  console.log(ctx.store.getters.isLoggedIn)
+
   if (ctx.store.getters.isLoggedIn) {
     if (ctx.route.name.includes('security-authorization')) {
       ctx.redirect(`${localePath}/adverts`)

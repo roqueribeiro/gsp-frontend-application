@@ -1,10 +1,8 @@
 # gsp-frontend-application
 
-> MySolver Front End Application
-
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 

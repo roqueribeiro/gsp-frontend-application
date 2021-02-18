@@ -36,11 +36,11 @@ export default {
       console.log(this.authUser)
     },
     createUserWithEmail() {
-      this.$fireAuth.createUserWithEmailAndPassword('foo@foo.foo', '123456')
+      this.$fire.auth.createUserWithEmailAndPassword('foo@foo.foo', '123456')
     },
     async signInWithEmail() {
       try {
-        await this.$fireAuth.signInWithEmailAndPassword('foo@foo.foo', '123456')
+        await this.$fire.auth.signInWithEmailAndPassword('foo@foo.foo', '123456')
       } catch (e) {
         alert(e)
       }

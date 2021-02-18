@@ -1,75 +1,35 @@
-const colors = require('vuetify/es5/util/colors').default
+import colors from 'vuetify/es5/util/colors'
 
-module.exports = {
-  /*
-   ** Headers of the page
-   */
+export default {
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - MySolver',
     title: 'MySolver',
     meta: [
-      {
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: ''
-      }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  pwa: {
-    manifest: {
-      name: 'MySolver',
-      short_name: 'MySolver',
-      description: 'description',
-      display: 'standalone',
-      orientation: 'portrait',
-      start_url: '/adverts',
-      theme_color: colors.blue.darken2,
-      background_color: colors.grey.lighten3
-    }
-  },
-  router: {
-    middleware: 'authenticated'
-  },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: {
-    color: 'white',
-    height: '3px',
-    continuous: true
-  },
-  /*
-   ** Global CSS
-   */
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/main.css'],
-  /*
-   ** Plugins to load before mounting the App
-   */
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/bus', '~/plugins/socket', '~/plugins/vee-validate'],
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/dotenv',
     '@nuxtjs/moment',
     [
       '@nuxtjs/firebase',
@@ -87,8 +47,14 @@ module.exports = {
         services: {
           auth: {
             initialize: {
-              onSuccessAction: 'handleSuccessfulAuthentication',
-              ssr: true
+              // onAuthStateChangedMutation: 'SET_AUTH_USER',
+              onAuthStateChangedAction: 'handleSuccessfulAuthentication',
+              ssr: {
+                serverLogin: {
+                  sessionLifetime: 0,
+                  loginDelay: 50
+                }
+              }
             }
           },
           firestore: true,
@@ -143,25 +109,49 @@ module.exports = {
       }
     ]
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-  /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
+
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      lang: 'pt-br',
+      name: 'MySolver',
+      short_name: 'MySolver',
+      description: 'description',
+      display: 'standalone',
+      orientation: 'portrait',
+      start_url: '/adverts',
+      theme_color: colors.blue.darken2,
+      background_color: colors.grey.lighten3
+    },
+  },
+
+  // Content module configuration: https://go.nuxtjs.dev/config-content
+  content: {},
+
+  router: {
+    middleware: 'authenticated'
+  },
+
+  loading: {
+    color: 'white',
+    height: '3px',
+    continuous: true
+  },
+
+  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
@@ -181,19 +171,14 @@ module.exports = {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          background: colors.grey.darken4
-        }
-      }
-    }
+        },
+      },
+    },
   },
-  /*
-   ** Build configuration
-   */
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['vee-validate/dist/rules'],
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }
