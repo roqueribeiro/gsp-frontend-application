@@ -10,7 +10,7 @@ extend('alpha', alpha)
 export default function VeeValidatePlugin({ app }) {
   configure({
     defaultMessage: (_, values) =>
-      app.i18n.t(`validations.${values._rule_}`, values)
+      app.i18n.t(`validations.${values._rule_}`, values),
   })
 }
 

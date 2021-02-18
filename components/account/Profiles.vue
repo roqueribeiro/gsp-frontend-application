@@ -9,7 +9,7 @@
         max-width="100%"
         max-height="250"
       >
-        <template v-slot:placeholder>
+        <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular
               indeterminate
@@ -32,9 +32,7 @@
             ></v-img>
           </v-avatar>
           <h1 class="display-1 text-center font-weight-light">
-            <v-badge color="primary" icon="mdi-star">
-              Marcus Smith
-            </v-badge>
+            <v-badge color="primary" icon="mdi-star"> Marcus Smith </v-badge>
           </h1>
           <v-rating
             v-model="rating"
@@ -57,9 +55,7 @@
             >
               232
             </h1>
-            <small class="text-center caption">
-              Seguidores
-            </small>
+            <small class="text-center caption"> Seguidores </small>
           </v-card>
         </v-col>
         <v-col class="text-center" lg="2">
@@ -67,9 +63,7 @@
             <h1 class="headline text-center font-weight-light primary--text">
               18
             </h1>
-            <small class="text-center caption">
-              Serviços Realizados
-            </small>
+            <small class="text-center caption"> Serviços Realizados </small>
           </v-card>
         </v-col>
       </v-row>
@@ -83,8 +77,8 @@ export default {
   name: 'Profiles',
   components: {},
   data: () => ({
-    rating: 4.5
-  })
+    rating: 4.5,
+  }),
 }
 </script>
 

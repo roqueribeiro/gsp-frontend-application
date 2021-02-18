@@ -42,7 +42,7 @@ export default {
           storageBucket: 'gsp-frontend-application.appspot.com',
           messagingSenderId: '191300628714',
           appId: '1:191300628714:web:1314c7ab0e6e4855da6793',
-          measurementId: 'G-7RSW8KX0VS'
+          measurementId: 'G-7RSW8KX0VS',
         },
         services: {
           auth: {
@@ -52,10 +52,10 @@ export default {
               ssr: {
                 serverLogin: {
                   sessionLifetime: 0,
-                  loginDelay: 50
-                }
-              }
-            }
+                  loginDelay: 50,
+                },
+              },
+            },
           },
           firestore: true,
           functions: true,
@@ -64,9 +64,9 @@ export default {
           messaging: true,
           performance: true,
           analytics: true,
-          remoteConfig: true
-        }
-      }
+          remoteConfig: true,
+        },
+      },
     ],
     [
       'nuxt-i18n',
@@ -75,7 +75,7 @@ export default {
         detectBrowserLanguage: {
           useCookie: true,
           cookieKey: 'i18n_redirected',
-          alwaysRedirect: true
+          alwaysRedirect: true,
         },
         defaultLocale: 'pt-BR',
         locales: [
@@ -83,31 +83,31 @@ export default {
             code: 'en-US',
             iso: 'en-US',
             name: 'English (US)',
-            file: 'en-US.js'
+            file: 'en-US.js',
           },
           {
             code: 'es-ES',
             iso: 'es-ES',
             name: 'Español (ES)',
-            file: 'es-ES.js'
+            file: 'es-ES.js',
           },
           {
             code: 'pt-BR',
             iso: 'pt-BR',
             name: 'Português (BR)',
-            file: 'pt-BR.js'
-          }
+            file: 'pt-BR.js',
+          },
         ],
         vuex: {
           moduleName: 'i18n',
           syncLocale: true,
           syncMessages: true,
-          syncRouteParams: true
+          syncRouteParams: true,
         },
         lazy: true,
-        langDir: 'locales/'
-      }
-    ]
+        langDir: 'locales/',
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -134,7 +134,7 @@ export default {
       orientation: 'portrait',
       start_url: '/adverts',
       theme_color: colors.blue.darken2,
-      background_color: colors.grey.lighten3
+      background_color: colors.grey.lighten3,
     },
   },
 
@@ -142,13 +142,13 @@ export default {
   content: {},
 
   router: {
-    middleware: 'authenticated'
+    middleware: 'authenticated',
   },
 
   loading: {
     color: 'white',
     height: '3px',
-    continuous: true
+    continuous: true,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -158,10 +158,10 @@ export default {
       dark: false,
       themes: {
         options: {
-          customProperties: true
+          customProperties: true,
         },
         light: {
-          background: colors.grey.lighten3
+          background: colors.grey.lighten3,
         },
         dark: {
           primary: colors.blue.darken2,
@@ -179,6 +179,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['vee-validate/dist/rules'],
-    extend(config, ctx) { }
-  }
+    extend() {},
+  },
 }

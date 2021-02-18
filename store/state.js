@@ -1,4 +1,4 @@
 export default () => ({
   authUser: null,
-  claims: null
+  claims: null,
 })

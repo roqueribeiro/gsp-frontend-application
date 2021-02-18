@@ -11,10 +11,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: ''
-        }
-      ]
+          content: '',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

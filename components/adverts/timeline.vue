@@ -1,8 +1,8 @@
 <template>
-  <v-container style="max-width: 600px;">
+  <v-container style="max-width: 600px">
     <v-timeline dense clipped>
       <v-timeline-item fill-dot class="white--text mb-12" color="orange" large>
-        <template v-slot:icon>
+        <template #icon>
           <span>JL</span>
         </template>
         <v-text-field
@@ -13,10 +13,8 @@
           solo
           @keydown.enter="comment"
         >
-          <template v-slot:append>
-            <v-btn class="mx-0" depressed @click="comment">
-              Post
-            </v-btn>
+          <template #append>
+            <v-btn class="mx-0" depressed @click="comment"> Post </v-btn>
           </template>
         </v-text-field>
       </v-timeline-item>
@@ -75,9 +73,7 @@
       </v-timeline-item>
 
       <v-timeline-item class="mb-4" hide-dot>
-        <v-btn class="mx-0" color="white">
-          Resend Email
-        </v-btn>
+        <v-btn class="mx-0" color="white"> Resend Email </v-btn>
       </v-timeline-item>
 
       <v-timeline-item class="mb-4" color="grey" small>
@@ -106,13 +102,13 @@ export default {
   data: () => ({
     events: [],
     input: null,
-    nonce: 0
+    nonce: 0,
   }),
 
   computed: {
     timeline() {
       return this.events.slice().reverse()
-    }
+    },
   },
 
   methods: {
@@ -121,19 +117,16 @@ export default {
       this.events.push({
         id: this.nonce++,
         text: this.input,
-        time: time.replace(
-          /:\d{2}\sGMT-\d{4}\s\((.*)\)/,
-          (match, contents, offset) => {
-            return ` ${contents
-              .split(' ')
-              .map((v) => v.charAt(0))
-              .join('')}`
-          }
-        )
+        time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (contents) => {
+          return ` ${contents
+            .split(' ')
+            .map((v) => v.charAt(0))
+            .join('')}`
+        }),
       })
 
       this.input = null
-    }
-  }
+    },
+  },
 }
 </script>

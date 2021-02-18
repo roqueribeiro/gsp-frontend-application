@@ -18,12 +18,12 @@ export default {
   components: {
     Drawer,
     Footer,
-    BottomNavigation
+    BottomNavigation,
   },
   watch: {
     $route() {
       this.$bus.$emit('SHOW_BOTTOM_NAVIGATION', false)
-    }
-  }
+    },
+  },
 }
 </script>

@@ -17,13 +17,13 @@
 export default {
   name: 'BottomNavigation',
   data: () => ({
-    buttons: false
+    buttons: false,
   }),
   mounted() {
     this.$bus.$on(
       'SHOW_BOTTOM_NAVIGATION',
       (data) => (this.buttons = data.buttons)
     )
-  }
+  },
 }
 </script>

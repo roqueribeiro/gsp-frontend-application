@@ -2,6 +2,12 @@
   <div class="background"></div>
 </template>
 
+<script>
+export default {
+  name: 'Background',
+}
+</script>
+
 <style scoped>
 .background {
   position: fixed;
@@ -15,8 +21,3 @@
   bottom: 0%;
 }
 </style>
-<script>
-export default {
-  name: 'Background'
-}
-</script>

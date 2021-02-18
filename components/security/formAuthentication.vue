@@ -90,8 +90,7 @@ export default {
       this.$emit('showLoading', true)
       await this.$fire.auth
         .signInWithEmailAndPassword(this.email, this.password)
-        .then((data) => {
-          console.log(data)
+        .then(() => {
           this.$router.push({ path: this.localePath('/adverts') })
         })
         .catch((e) => {
@@ -108,7 +107,7 @@ export default {
       this.$emit('showLoading', true)
       await this.$fire.auth
         .signInWithPopup(provider)
-        .then((result) => {
+        .then(() => {
           this.$router.push({ path: this.localePath('/adverts') })
         })
         .catch((e) => {

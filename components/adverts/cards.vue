@@ -89,14 +89,14 @@ export default {
   props: {
     adverts: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   methods: {
     categorySelector(e) {
       // eslint-disable-next-line no-console
       console.log(e)
-    }
-  }
+    },
+  },
 }
 </script>

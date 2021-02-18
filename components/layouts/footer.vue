@@ -31,13 +31,13 @@ export default {
     links: [
       { title: 'Termos e Condições', to: '/' },
       { title: 'Políticas de Privacidade', to: '/' },
-      { title: 'Contato', to: '/' }
-    ]
+      { title: 'Contato', to: '/' },
+    ],
   }),
   computed: {
     ...mapGetters({
-      isLoggedIn: 'isLoggedIn'
-    })
-  }
+      isLoggedIn: 'isLoggedIn',
+    }),
+  },
 }
 </script>

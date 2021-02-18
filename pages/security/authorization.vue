@@ -13,7 +13,7 @@
           :disabled="showLoading"
           max-width="600"
         >
-          <template v-slot:progress>
+          <template #progress>
             <v-progress-linear
               v-if="!showLoading"
               value="100%"
@@ -55,21 +55,13 @@ export default {
   name: 'Authorization',
   components: {
     Logo,
-    FormAuthentication
+    FormAuthentication,
   },
   props: {},
   data: () => ({
     showLoading: false,
-    errorMessage: ''
+    errorMessage: '',
   }),
-  methods: {
-    showLoadingMethod(e) {
-      this.showLoading = e
-    },
-    errorMessageMethod(e) {
-      this.errorMessage = e
-    }
-  },
   head() {
     return {
       title: 'Authorization',
@@ -77,10 +69,18 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: ''
-        }
-      ]
+          content: '',
+        },
+      ],
     }
-  }
+  },
+  methods: {
+    showLoadingMethod(e) {
+      this.showLoading = e
+    },
+    errorMessageMethod(e) {
+      this.errorMessage = e
+    },
+  },
 }
 </script>

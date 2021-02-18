@@ -5,7 +5,7 @@ export default {
     email: 'The email address you entered is not valid.',
     min: 'The {_field_} field requires at least {length} characters.',
     max: 'The {_field_} field must be less than {length} characters.',
-    alpha: 'This field accepts only characters.'
+    alpha: 'This field accepts only characters.',
   },
   security: {
     authorization: {
@@ -13,7 +13,7 @@ export default {
       username: 'E-Mail',
       password: 'Password',
       submit: 'Login',
-      google: 'Login With Google'
-    }
-  }
+      google: 'Login With Google',
+    },
+  },
 }

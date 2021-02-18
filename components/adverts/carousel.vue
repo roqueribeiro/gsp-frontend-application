@@ -25,9 +25,9 @@ export default {
   props: {
     banners: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 }
 </script>
 <style scoped>

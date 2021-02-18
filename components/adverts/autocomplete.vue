@@ -34,14 +34,14 @@ export default {
         'Fretado',
         'Montador de Móveis',
         'Motorista',
-        'Fotografo'
-      ]
+        'Fotografo',
+      ],
     }
   },
   watch: {
     search(val) {
       val && val !== this.select && this.querySelections(val)
-    }
+    },
   },
   methods: {
     querySelections(v) {
@@ -52,7 +52,7 @@ export default {
         })
         this.loading = false
       }, 500)
-    }
-  }
+    },
+  },
 }
 </script>

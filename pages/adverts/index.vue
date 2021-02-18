@@ -8,12 +8,8 @@
       tile
       max-width="1200"
     >
-      <h1 class="display-1 font-weight-light text--primary">
-        Destaques
-      </h1>
-      <small class="text--secondary">
-        Anúncios Patrocinados
-      </small>
+      <h1 class="display-1 font-weight-light text--primary">Destaques</h1>
+      <small class="text--secondary"> Anúncios Patrocinados </small>
       <avertCards :adverts="advertsPaid" />
     </v-card>
     <v-divider></v-divider>
@@ -24,9 +20,7 @@
       tile
       max-width="1200"
     >
-      <h1 class="display-1 font-weight-light text--primary">
-        Mais Acessados
-      </h1>
+      <h1 class="display-1 font-weight-light text--primary">Mais Acessados</h1>
       <small class="text--secondary">
         Anúncios com mais acessos nesta semana
       </small>
@@ -56,26 +50,26 @@ export default {
   components: {
     avertCarousel,
     avertCards,
-    avertMosaic
+    avertMosaic,
   },
   data: () => ({
     banners: [
       {
         src: '/banners/adverts/top/adverts-banners-1.jpg',
-        title: 'Mecânica'
+        title: 'Mecânica',
       },
       {
         src: '/banners/adverts/top/adverts-banners-2.jpg',
-        title: 'Encanamento'
+        title: 'Encanamento',
       },
       {
         src: '/banners/adverts/top/adverts-banners-3.jpg',
-        title: 'Jardinagem'
+        title: 'Jardinagem',
       },
       {
         src: '/banners/adverts/top/adverts-banners-4.jpg',
-        title: 'Beleza e Estética'
-      }
+        title: 'Beleza e Estética',
+      },
     ],
     advertsPaid: [
       {
@@ -89,12 +83,12 @@ export default {
           { src: '/adverts/sample/cabeleireira/1.jpg' },
           { src: '/adverts/sample/cabeleireira/2.jpg' },
           { src: '/adverts/sample/cabeleireira/3.jpg' },
-          { src: '/adverts/sample/cabeleireira/4.jpg' }
+          { src: '/adverts/sample/cabeleireira/4.jpg' },
         ],
         details: false,
         description:
           'Somos o único salão tradicional da região que além de oferecer serviços completos de corte de cabelo, manicure e pedicure, possuímos uma sala exclusiva para massagens com especialista com experiencia de 20 anos no setor.',
-        to: '/account/1'
+        to: '/account/1',
       },
       {
         id: '2',
@@ -106,12 +100,12 @@ export default {
         carousel: [
           { src: '/adverts/sample/mecanico/1.jpg' },
           { src: '/adverts/sample/mecanico/2.jpg' },
-          { src: '/adverts/sample/mecanico/3.jpg' }
+          { src: '/adverts/sample/mecanico/3.jpg' },
         ],
         details: false,
         description:
           'Trabalhamos com todas as marcas e tipos de veículos automotores.',
-        to: '/account/2'
+        to: '/account/2',
       },
       {
         id: '3',
@@ -123,12 +117,12 @@ export default {
         carousel: [
           { src: '/adverts/sample/jardineiro/4.jpg' },
           { src: '/adverts/sample/jardineiro/1.jpg' },
-          { src: '/adverts/sample/jardineiro/2.jpg' }
+          { src: '/adverts/sample/jardineiro/2.jpg' },
         ],
         details: false,
         description:
           'Tenho experiência com jardins empresariais e residenciais.',
-        to: '/account/3'
+        to: '/account/3',
       },
       {
         id: '4',
@@ -141,12 +135,12 @@ export default {
           { src: '/adverts/sample/encanador/1.jpg' },
           { src: '/adverts/sample/encanador/2.jpg' },
           { src: '/adverts/sample/encanador/3.jpg' },
-          { src: '/adverts/sample/encanador/4.jpg' }
+          { src: '/adverts/sample/encanador/4.jpg' },
         ],
         details: false,
         description: 'Trabalho a mais de 20 anos com serviços hidráulicos.',
-        to: '/account/4'
-      }
+        to: '/account/4',
+      },
     ],
     advertsMostViewed: [
       {
@@ -158,12 +152,12 @@ export default {
         rating: 4.5,
         carousel: [
           { src: '/adverts/sample/fotografo/1.jpg' },
-          { src: '/adverts/sample/fotografo/2.jpg' }
+          { src: '/adverts/sample/fotografo/2.jpg' },
         ],
         details: false,
         description:
           'Fotografo de casamentos e eventos particulares ou empresariais.',
-        to: '/account/5'
+        to: '/account/5',
       },
       {
         id: '4',
@@ -175,12 +169,12 @@ export default {
         carousel: [
           { src: '/adverts/sample/musico/1.jpg' },
           { src: '/adverts/sample/musico/2.jpg' },
-          { src: '/adverts/sample/musico/3.jpg' }
+          { src: '/adverts/sample/musico/3.jpg' },
         ],
         details: false,
         description:
           'Músicos formados para casamentos e eventos particulares ou empresariais.',
-        to: '/account/6'
+        to: '/account/6',
       },
       {
         id: '6',
@@ -191,12 +185,12 @@ export default {
         rating: 3.8,
         carousel: [
           { src: '/adverts/sample/fretado/1.jpg' },
-          { src: '/adverts/sample/fretado/2.jpg' }
+          { src: '/adverts/sample/fretado/2.jpg' },
         ],
         details: false,
         description:
           'O ônibus fretado mensal para empresa preço Casa Verde é construído para comportar uma imensa quantidade de pessoas de modo adequado, para se tornar possível que elas possam percorrer as rodovias até chegarem nos locais que desejam conhecer de modo mais divertido e seguro. Com a utilização de bancos que podem ser ajustáveis para que os passageiros tenham mais conforto e que possam usar as tomadas que são instaladas na parede dos veículos para carregar o celular ou ainda utilizar o WI-FI para navegar na internet e se entreter.',
-        to: '/account/7'
+        to: '/account/7',
       },
       {
         id: '7',
@@ -209,105 +203,105 @@ export default {
           { src: '/adverts/sample/encanador/1.jpg' },
           { src: '/adverts/sample/encanador/2.jpg' },
           { src: '/adverts/sample/encanador/3.jpg' },
-          { src: '/adverts/sample/encanador/4.jpg' }
+          { src: '/adverts/sample/encanador/4.jpg' },
         ],
         details: false,
         description: 'Trabalho a mais de 20 anos com serviços hidráulicos.',
-        to: '/account/8'
-      }
+        to: '/account/8',
+      },
     ],
     categories: [
       {
         icon: 'mdi-key-variant',
         title: 'Chaveiro',
-        to: 'adverts/1'
+        to: 'adverts/1',
       },
       {
         icon: 'mdi-flower',
         title: 'Jardinagem',
-        to: 'adverts/2'
+        to: 'adverts/2',
       },
       {
         icon: 'mdi-bus-stop',
         title: 'Fretamento',
-        to: 'adverts/3'
+        to: 'adverts/3',
       },
       {
         icon: 'mdi-camera',
         title: 'Fotografia',
-        to: 'adverts/4'
+        to: 'adverts/4',
       },
       {
         icon: 'mdi-car',
         title: 'Motorista',
-        to: 'adverts/5'
+        to: 'adverts/5',
       },
       {
         icon: 'mdi-dog-service',
         title: 'Adestramento',
-        to: 'adverts/6'
+        to: 'adverts/6',
       },
       {
         icon: 'mdi-flask-round-bottom-outline',
         title: 'Eletrecista',
-        to: 'adverts/7'
+        to: 'adverts/7',
       },
       {
         icon: 'mdi-foot-print',
         title: 'Podologia',
-        to: 'adverts/8'
+        to: 'adverts/8',
       },
       {
         icon: 'mdi-oil-temperature',
         title: 'Mecânica',
-        to: 'adverts/9'
+        to: 'adverts/9',
       },
       {
         icon: 'mdi-pipe-wrench',
         title: 'Encanamento',
-        to: 'adverts/10'
+        to: 'adverts/10',
       },
       {
         icon: 'mdi-propane-tank',
         title: 'Entrega de Gás',
-        to: 'adverts/11'
+        to: 'adverts/11',
       },
       {
         icon: 'mdi-truck-delivery',
         title: 'Carreto',
-        to: 'adverts/12'
+        to: 'adverts/12',
       },
       {
         icon: 'mdi-video-vintage',
         title: 'Produtora',
-        to: 'adverts/13'
+        to: 'adverts/13',
       },
       {
         icon: 'mdi-wall',
         title: 'Pedreiro',
-        to: 'adverts/14'
+        to: 'adverts/14',
       },
       {
         icon: 'mdi-watch',
         title: 'Relojoaria',
-        to: 'adverts/15'
+        to: 'adverts/15',
       },
       {
         icon: 'mdi-wardrobe-outline',
         title: 'Montador de Móveis',
-        to: 'adverts/16'
+        to: 'adverts/16',
       },
       {
         icon: 'mdi-weight-lifter',
         title: 'Personal',
-        to: 'adverts/17'
+        to: 'adverts/17',
       },
       {
         icon: 'mdi-wrench',
         title: 'Serviços Gerais',
-        to: 'adverts/18'
-      }
-    ]
+        to: 'adverts/18',
+      },
+    ],
   }),
   head() {
     return {
@@ -316,10 +310,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: ''
-        }
-      ]
+          content: '',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

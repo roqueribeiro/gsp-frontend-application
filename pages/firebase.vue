@@ -19,17 +19,29 @@
 
 import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
+  head() {
+    return {
+      title: 'Firebase',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+      ],
+    }
+  },
   computed: {
     ...mapState({
-      authUser: (state) => state.authUser
+      authUser: (state) => state.authUser,
     }),
     ...mapGetters({
-      isLoggedIn: 'isLoggedIn'
-    })
+      isLoggedIn: 'isLoggedIn',
+    }),
   },
   methods: {
     ...mapActions({
-      logoutUser: 'logoutUser'
+      logoutUser: 'logoutUser',
     }),
     getAuthenticatedUser() {
       // eslint-disable-next-line no-console
@@ -40,7 +52,10 @@ export default {
     },
     async signInWithEmail() {
       try {
-        await this.$fire.auth.signInWithEmailAndPassword('foo@foo.foo', '123456')
+        await this.$fire.auth.signInWithEmailAndPassword(
+          'foo@foo.foo',
+          '123456'
+        )
       } catch (e) {
         alert(e)
       }
@@ -51,19 +66,7 @@ export default {
       } catch (e) {
         alert(e)
       }
-    }
+    },
   },
-  head() {
-    return {
-      title: 'Firebase',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: ''
-        }
-      ]
-    }
-  }
 }
 </script>

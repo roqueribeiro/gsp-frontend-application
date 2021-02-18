@@ -8,7 +8,7 @@
       src="/menu-bg.jpg"
       app
     >
-      <template v-slot:prepend>
+      <template #prepend>
         <v-list-item two-line>
           <v-list-item-avatar>
             <v-img
@@ -46,9 +46,7 @@
             <v-icon>mdi-exit-to-app</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>
-              Desconectar
-            </v-list-item-title>
+            <v-list-item-title> Desconectar </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -117,7 +115,7 @@ import SearchField from '~/components/adverts/autocomplete.vue'
 
 export default {
   components: {
-    SearchField
+    SearchField,
   },
   data: () => ({
     drawer: false,
@@ -125,62 +123,62 @@ export default {
       {
         icon: 'mdi-chart-bubble',
         title: 'Meu Perfil',
-        to: '/account/1'
+        to: '/account/1',
       },
       {
         icon: 'mdi-apps',
         title: 'Encontrar Serviços',
-        to: '/adverts'
-      }
+        to: '/adverts',
+      },
     ],
     notifications: [
       {
         icon: 'mdi-check-circle',
         type: 'success',
         title: 'Notificação de Exemplo',
-        description: 'Texto descritivo da notificação'
+        description: 'Texto descritivo da notificação',
       },
       {
         icon: 'mdi-check-circle',
         type: 'success',
         title: 'Notificação de Exemplo',
-        description: 'Texto descritivo da notificação'
+        description: 'Texto descritivo da notificação',
       },
       {
         icon: 'mdi-alert-circle',
         type: 'warning',
         title: 'Notificação de Exemplo',
-        description: 'Texto descritivo da notificação'
-      }
+        description: 'Texto descritivo da notificação',
+      },
     ],
     rightDrawer: false,
-    title: 'MySolver'
+    title: 'MySolver',
   }),
   computed: {
     ...mapState({
-      authUser: (state) => state.authUser
+      authUser: (state) => state.authUser,
     }),
     ...mapGetters({
-      isLoggedIn: 'isLoggedIn'
+      isLoggedIn: 'isLoggedIn',
     }),
     navigation: (ctx) => {
       const routeName = ctx.$route.name
       const isLoggedIn = ctx.$store.getters.isLoggedIn
       if (!routeName) return false
       return !routeName.includes('security-authorization') && isLoggedIn && true
-    }
+    },
   },
   methods: {
     ...mapActions({
-      logoutUser: 'logoutUser'
+      logoutUser: 'logoutUser',
     }),
-    notificationClick(e) {},
+    notificationClick() {},
     async logout() {
       await this.logoutUser().then(() => {
         this.$router.push({ path: this.localePath('/security/authorization') })
         this.drawer = false
       })
-    }
-  }
+    },
+  },
 }
 </script>

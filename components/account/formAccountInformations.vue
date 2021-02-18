@@ -22,7 +22,7 @@
           :close-on-content-click="false"
           max-width="290"
         >
-          <template v-slot:activator="{ on }">
+          <template #activator="{ on }">
             <ValidationProvider
               v-slot="{ errors }"
               name="Data de Nascimento"
@@ -146,7 +146,7 @@ export default {
   name: 'AccountInformations',
   components: {
     ValidationObserver,
-    ValidationProvider
+    ValidationProvider,
   },
   data: () => ({
     calendar: false,
@@ -160,11 +160,11 @@ export default {
       city: '',
       state: {
         name: '',
-        short_name: ''
+        short_name: '',
       },
       mobile: '',
-      phone: ''
-    }
-  })
+      phone: '',
+    },
+  }),
 }
 </script>

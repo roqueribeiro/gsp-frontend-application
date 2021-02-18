@@ -7,7 +7,7 @@ export default {
     if (ssrVerifiedAuthUser && ssrVerifiedAuthUserClaims) {
       await commit('SET_AUTH_USER', {
         authUser: ssrVerifiedAuthUser,
-        claims: ssrVerifiedAuthUserClaims
+        claims: ssrVerifiedAuthUserClaims,
       })
     }
     await middlewareAuthenticated(ctx)
@@ -19,8 +19,8 @@ export default {
     commit('SET_AUTH_USER', { authUser })
   },
   async logoutUser({ commit }) {
-    await this.$fire.auth.signOut().then(function() {
+    await this.$fire.auth.signOut().then(function () {
       commit('RESET_STORE')
     })
-  }
+  },
 }

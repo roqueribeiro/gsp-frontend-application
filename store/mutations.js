@@ -9,8 +9,8 @@ export default {
     state.authUser = {
       uid: authUser.uid,
       email: authUser.email,
-      emailVerified: authUser.emailVerified
+      emailVerified: authUser.emailVerified,
     }
     state.claims = { claims }
-  }
+  },
 }

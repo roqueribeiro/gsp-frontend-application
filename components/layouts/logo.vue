@@ -8,7 +8,7 @@
     :max-width="maxWidth"
     :max-height="maxHeight"
   >
-    <template v-slot:placeholder>
+    <template #placeholder>
       <v-row class="fill-height ma-0" align="center" justify="center">
         <v-progress-circular
           indeterminate
@@ -24,16 +24,16 @@ export default {
   props: {
     cssClass: {
       type: String,
-      default: 'mt-0 pt-0 mb-5'
+      default: 'mt-0 pt-0 mb-5',
     },
     maxWidth: {
       type: Number,
-      default: 280
+      default: 280,
     },
     maxHeight: {
       type: Number,
-      default: 100
-    }
-  }
+      default: 100,
+    },
+  },
 }
 </script>

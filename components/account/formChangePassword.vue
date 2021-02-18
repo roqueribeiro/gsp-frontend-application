@@ -69,10 +69,10 @@ export default {
   name: 'ChangePassword',
   components: {
     ValidationObserver,
-    ValidationProvider
+    ValidationProvider,
   },
   data: () => ({
-    hidePassword: false
-  })
+    hidePassword: false,
+  }),
 }
 </script>

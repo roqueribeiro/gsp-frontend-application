@@ -26,8 +26,8 @@ export default {
   props: {
     categories: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 }
 </script>
